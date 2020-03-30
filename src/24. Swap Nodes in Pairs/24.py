@@ -3,6 +3,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
         # If the list has no node or has only one node left.
@@ -12,7 +13,7 @@ class Solution:
         first_node = head
         second_node = head.next
         # Swapping
-        first_node.next  = self.swapPairs(second_node.next)
+        first_node.next = self.swapPairs(second_node.next)
         second_node.next = first_node
         # Now the head is the second node
         return second_node
@@ -26,6 +27,7 @@ class Solution:
             pre = a
         return self.next
 
+
 def createList(nums):
     head = ListNode(0)
     cur = head
@@ -33,13 +35,15 @@ def createList(nums):
         cur.next = ListNode(num)
         cur = cur.next
     return head
-            
+
+
 def printList(head):
     cur = head
     while cur != None:
         print(cur.val, '->', end='')
         cur = cur.next
     print('NULL')
+
 
 if __name__ == "__main__":
     nums = [1, 2, 3, 4]

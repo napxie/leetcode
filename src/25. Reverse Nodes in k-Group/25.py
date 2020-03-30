@@ -4,6 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
         pre, end, pre.next, end.next = self, self, head, head
@@ -18,11 +19,13 @@ class Solution:
             pre.next, start.next = self.reverse(start), _next
             end = pre = start
         return self.next
+
     def reverse(self, head):
         pre, cur = None, head
         while cur:
             cur.next, pre, cur = pre, cur, cur.next
         return pre
+
 
 def createList():
     head = ListNode(0)
@@ -31,7 +34,8 @@ def createList():
         cur.next = ListNode(i)
         cur = cur.next
     return head
-            
+
+
 def printList(head):
     cur = head
     while cur != None:
@@ -39,6 +43,7 @@ def printList(head):
         cur = cur.next
 
     print('NULL')
+
 
 if __name__ == "__main__":
     head = createList()

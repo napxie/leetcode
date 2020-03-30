@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def robotSim(self, commands: List[int], obstacles: List[List[int]]) -> int:
         dx = [0, 1, 0, -1]
@@ -8,9 +9,9 @@ class Solution:
         obstacleSet = set(map(tuple, obstacles))
         ans = 0
         for cmd in commands:
-            if cmd == -2:  #left
+            if cmd == -2:  # left
                 di = (di - 1) % 4
-            elif cmd == -1:  #right
+            elif cmd == -1:  # right
                 di = (di + 1) % 4
             else:
                 for k in range(cmd):
@@ -20,6 +21,7 @@ class Solution:
                         ans = max(ans, x*x + y*y)
         return ans
 
+
 if __name__ == "__main__":
-    commands, obstacles = [4,-1,4,-2,4], [[2,4]]
+    commands, obstacles = [4, -1, 4, -2, 4], [[2, 4]]
     print(Solution().robotSim(commands, obstacles))

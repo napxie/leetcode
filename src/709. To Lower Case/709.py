@@ -7,6 +7,7 @@ class Solution:
             s = s + c
         return s
 
+
 if __name__ == "__main__":
     str = "Hello"
     print(Solution().toLowerCase(str))

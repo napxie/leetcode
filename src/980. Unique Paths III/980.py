@@ -1,11 +1,14 @@
 from functools import lru_cache
 from typing import List
 
+
 class Solution:
     def uniquePathsIII(self, grid: List[List[int]]) -> int:
         R, C = len(grid), len(grid[0])
+
         def code(r, c):
             return 1 << (r * C + c)
+
         def neiors(r, c):
             for nr, nc in ((r-1, c), (r, c-1), (r+1, c), (r, c+1)):
                 if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] % 2 == 0:
@@ -33,6 +36,7 @@ class Solution:
 
         return dp(sr, sc, target)
 
+
 if __name__ == "__main__":
-    grid = [[1,0,0,0],[0,0,0,0],[0,0,2,-1]]
+    grid = [[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 2, -1]]
     print(Solution().uniquePathsIII(grid))

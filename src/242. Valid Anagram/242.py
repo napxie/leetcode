@@ -7,6 +7,7 @@ class Solution:
             dic2[item] = dic2.get(item, 0) + 1
         return dic1 == dic2
 
+
 if __name__ == "__main__":
     s, t = "anagram", "nagaram"
     print(Solution().isAnagram(s, t))

@@ -3,8 +3,9 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 class Solution:
-    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:        
+    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         prehead = ListNode(-1)
         prev = prehead
         while l1 and l2:
@@ -18,7 +19,7 @@ class Solution:
         prev.next = l1 if l1 is not None else l2
         return prehead.next
 
-    def mergeTwoLists1(self, l1: ListNode, l2: ListNode) -> ListNode:        
+    def mergeTwoLists1(self, l1: ListNode, l2: ListNode) -> ListNode:
         if l1 is None:
             return l2
         elif l2 is None:
@@ -30,6 +31,7 @@ class Solution:
             l2.next = self.mergeTwoLists(l1, l2.next)
             return l2
 
+
 def createList():
     head = ListNode(0)
     cur = head
@@ -37,7 +39,8 @@ def createList():
     cur.next.next = ListNode(1)
     cur.next.next.next = ListNode(2)
     return head
-            
+
+
 def printList(head):
     cur = head
     while cur != None:
@@ -45,6 +48,7 @@ def printList(head):
         cur = cur.next
 
     print('NULL')
+
 
 if __name__ == "__main__":
     l1 = ListNode(1)

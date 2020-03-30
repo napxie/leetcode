@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def lemonadeChange(self, bills: List[int]) -> bool:
         five = ten = 0
@@ -21,6 +22,7 @@ class Solution:
                     return False
         return True
 
+
 if __name__ == "__main__":
-    bills = [5,5,5,10,20]
+    bills = [5, 5, 5, 10, 20]
     print(Solution().lemonadeChange(bills))

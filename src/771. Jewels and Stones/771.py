@@ -7,6 +7,8 @@ class Solution:
             if c in setJ:
                 cnt += 1
         return cnt
+
+
 if __name__ == "__main__":
     J, S = "aA", "aAAbbbb"
     print(Solution().numJewelsInStones(J, S))

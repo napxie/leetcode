@@ -11,6 +11,7 @@ class Solution:
                 hash[c] = t[i]
         return True
 
+
 if __name__ == "__main__":
-    s, t =  "egg", "add"
+    s, t = "egg", "add"
     print(Solution().isIsomorphic(s, t))

@@ -1,4 +1,6 @@
 from typing import List
+
+
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         res = [0] * (amount+1)
@@ -12,7 +14,8 @@ class Solution:
             return -1
         else:
             return res[amount]
-            
+
+
 if __name__ == "__main__":
     coins, amount = [1, 2, 5], 11
     print(Solution().coinChange(coins, amount))

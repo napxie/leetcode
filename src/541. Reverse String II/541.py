@@ -10,6 +10,7 @@ class Solution:
                 right -= 1
         return ''.join(s)
 
+
 if __name__ == "__main__":
     s, k = "abcdefg", 2
     print(Solution().reverseStr(s, k))

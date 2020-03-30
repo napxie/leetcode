@@ -12,6 +12,7 @@ class Solution:
                 ans.append(x)
         return "".join(ans)
 
+
 if __name__ == "__main__":
     S = "ab-cd"
     print(Solution().reverseOnlyLetters(S))

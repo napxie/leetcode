@@ -1,4 +1,6 @@
 import collections
+
+
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         count = collections.Counter(s)
@@ -9,6 +11,7 @@ class Solution:
             if count[ch] == 1:
                 return i
         return -1
+
 
 if __name__ == "__main__":
     s = "leetcode"

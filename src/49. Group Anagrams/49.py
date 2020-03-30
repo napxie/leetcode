@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         dic = {}
@@ -13,6 +14,7 @@ class Solution:
         for key, value in dic.items():
             res.append(value)
         return res
+
     def groupAnagrams1(self, strs: List[str]) -> List[List[str]]:
         for s in strs:
             count = [0] * 26
@@ -21,6 +23,7 @@ class Solution:
             ans[tuple(count)].append(s)
         return ans.values()
 
+
 if __name__ == "__main__":
-    strs = ["eat","tea","tan","ate","nat","bat"]
+    strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
     print(Solution().groupAnagrams(strs))

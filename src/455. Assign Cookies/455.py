@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def findContentChildren(self, g: List[int], s: List[int]) -> int:
         res, i, j = 0, 0, 0
@@ -14,6 +15,7 @@ class Solution:
                 j += 1
         return res
 
+
 if __name__ == "__main__":
-    g, s = [1,2,3], [1,1]
+    g, s = [1, 2, 3], [1, 1]
     print(Solution().findContentChildren(g, s))

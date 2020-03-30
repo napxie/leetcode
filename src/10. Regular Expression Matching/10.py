@@ -11,6 +11,7 @@ class Solution:
                     dp[i][j] = first_match and dp[i+1][j+1]
         return dp[0][0]
 
+
 if __name__ == "__main__":
-    s, t =  "egg", "add"
+    s, t = "egg", "add"
     print(Solution().isMatch(s, t))

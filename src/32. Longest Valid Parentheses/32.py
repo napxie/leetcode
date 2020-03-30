@@ -1,7 +1,8 @@
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
         n = len(s)
-        if n == 0: return 0
+        if n == 0:
+            return 0
         dp, res = [0] * n, 0
         for i in range(n):
             if i > 0 and s[i] == ")":
@@ -12,6 +13,7 @@ class Solution:
             if dp[i] > res:
                 res = dp[i]
         return res
+
 
 if __name__ == "__main__":
     s = "(()"

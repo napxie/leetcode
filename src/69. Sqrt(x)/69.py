@@ -1,6 +1,7 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        if x <= 0: return x
+        if x <= 0:
+            return x
         l, r = 1, x // 2
         while l < r:
             m = (l+r+1) >> 1
@@ -9,6 +10,7 @@ class Solution:
             else:
                 l = m
         return l
+
 
 if __name__ == "__main__":
     x = 4

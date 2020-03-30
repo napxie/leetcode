@@ -11,7 +11,8 @@ class Solution:
                 right += 1
         return ans
 
-        if not s: return 0
+        if not s:
+            return 0
         res = len(s)
         dp = [[i, i+1] for i in range(len(s))]
         for i in range(1, len(s)):
@@ -20,6 +21,7 @@ class Solution:
                     res += 1
                     dp[i].append(j-1)
         return res
+
 
 if __name__ == "__main__":
     s = "abc"

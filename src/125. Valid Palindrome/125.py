@@ -13,6 +13,8 @@ class Solution:
                 if not s[r].isalnum():
                     r -= 1
         return True
+
+
 if __name__ == "__main__":
     s = "A man, a plan, a canal: Panama"
     print(Solution().isPalindrome(s))

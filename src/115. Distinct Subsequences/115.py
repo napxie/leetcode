@@ -6,12 +6,13 @@ class Solution:
             dp[0][j] = 1
         for i in range(1, n2+1):
             for j in range(1, n1+1):
-                if t[i - 1] == s [j-1]:
+                if t[i - 1] == s[j-1]:
                     dp[i][j] = dp[i-1][j-1] + dp[i][j-1]
                 else:
                     dp[i][j] = dp[i][j-1]
         return dp[-1][-1]
 
+
 if __name__ == "__main__":
-     S, T = "rabbbit", "rabbit"
-     print(Solution().numDistinct(S, T))
+    S, T = "rabbbit", "rabbit"
+    print(Solution().numDistinct(S, T))

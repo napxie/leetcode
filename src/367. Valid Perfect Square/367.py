@@ -20,7 +20,8 @@ class Solution:
             i = (i + num / i) // 2
         return i * i == num
 
+
 if __name__ == "__main__":
-    num =  16
+    num = 16
     print(Solution().isPerfectSquare(num))
     print(Solution().isPerfectSquare1(num))
