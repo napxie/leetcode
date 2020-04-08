@@ -11,7 +11,17 @@ class Solution:
                 l = m
         return l
 
+    def mySqrt1(self, x: int) -> int:
+        if x == 0:
+            return 0
+        cur = 1
+        while True:
+            pre = cur
+            cur = (cur + x / cur) / 2
+            if abs(cur - pre) < 1e-6:
+                return int(cur)
 
+                
 if __name__ == "__main__":
     x = 4
     print(Solution().mySqrt(x))

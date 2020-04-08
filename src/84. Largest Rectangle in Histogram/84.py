@@ -12,8 +12,17 @@ class Solution:
                 res = max(res, (i-stack[-1]-1)*heights[tmp])
             stack.append(i)
         return res
+    def largestRectangleArea1(self, heights: List[int]) -> int:
+        stack, res = [-1], 0
+        for i in range(len(heights)):
+            while stack[-1] != -1 and heights[stack[-1]] >= heights[i]:
+                tmp = stack.pop()
+                res = max(res, (i-stack[-1]-1)*heights[tmp])
+            stack.append(i)
+        return res
 
 
 if __name__ == "__main__":
     heights = [2, 1, 5, 6, 2, 3]
     print(Solution().largestRectangleArea(heights))
+    print(Solution().largestRectangleArea1(heights))
