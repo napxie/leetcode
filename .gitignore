@@ -1,5 +1,33 @@
-#package file
 pkg/
+*.class
+
+#package file
+
+*.war
+*.ear
+
+#maven ignore
+target/
+
+#eclipse ignore
+.settings/
+.project
+.classpath
+
+#idea
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+# temp file
+
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
 
 # vscode ignore
 .vscode/
