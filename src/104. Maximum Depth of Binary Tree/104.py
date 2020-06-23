@@ -13,7 +13,7 @@ class Solution:
         else:
             left_height = self.maxDepth(root.left)
             right_height = self.maxDepth(root.right)
-            return max(left_height, right_height) + 1
+            
 
     def maxDepth(self, root: TreeNode) -> int:
         stack = []
@@ -26,3 +26,4 @@ class Solution:
                 depth = max(depth, current_depth)
                 stack.append((current_depth+1, root.left))
                 stack.append((current_depth+1, root.right))
+        return depth

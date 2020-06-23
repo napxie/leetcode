@@ -20,3 +20,4 @@ class Solution:
         if root is not None:
             traverse_node(root, 0)
         return result
+;
