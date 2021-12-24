@@ -1,5 +1,5 @@
 from heapq import heappop, heappush
-from typing import List, Mapping
+from typing import List
 class Solution:
     def eatenApples(self, apples: List[int], days: List[int]) -> int:
         ans = 0
